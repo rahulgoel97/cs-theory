@@ -1,0 +1,18 @@
+Notes from Harvard CS50 lecture on Hash Tables (https://www.youtube.com/watch?v=h2d9b_nEzoA&ab_channel=CS50)
+
+
+== Arrays & LinkedLists ==
+- Arrays need a size determination - a downside
+- Arrays cannot grow - therefore, linked lists
+- Linked lists require traversal thru the whole tree to get to the value needed - complexity = O(n)
+
+== Hash Tables ==
+- Hash value maps key to index on the hash table
+- Hash funtions need to be consistent
+- Example of collision in hash table - a hash function that uses first letter of a string to index (eg: Apple and Ant are both starting with "A" and therefore map top the same index). 
+- In case of collision, the next available slot is used
+- Once a collision occurs, game over. Drop out, go home. (clustering). lookups, deletions are now O(n) complexity
+
+== Separate Chaining model ==
+- Separate chaining model: Hash table is a pointer to a linked list
+- Work case look up time is O(n/k) => O(n). Actually, O(n/k) is an improvement over O(n) in some real-life cases. 
